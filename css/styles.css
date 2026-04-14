@@ -5,7 +5,6 @@ body {
 }
 
 /* HERO */
-/* HERO */
 .hero-logo {
     display: block;      
     width: 200px;       
@@ -81,6 +80,23 @@ span {
 .hero h1, .hero p, .hero button {
     position: relative;
     z-index: 1;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: white;
+    color: hotpink;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1; 
+}
+
+.hero button:hover {
+    transform: scale(1.2, 1.2); 
 }
 
 .cta{
