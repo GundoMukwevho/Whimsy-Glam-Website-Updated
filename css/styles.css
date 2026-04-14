@@ -1,0 +1,289 @@
+
+body {
+    background: #ffe4ec;
+    color: #333;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #ffc0d3, #ff9eb5);
+    color: white;
+    width:50%;
+    border-radius: 30px;
+    position: relative;
+    left:570px;
+    bottom: 230px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero-logo {
+    width: 250px;
+    max-width: 80%;
+    position: relative;
+   left:30px;
+   top:30px;
+}
+
+.hero-tagline {
+    margin-top: 15px;
+    font-size: 18px;
+    color: white;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: white;
+    color: hotpink;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease ;
+}
+
+.hero button:hover{
+    transform: scale(1.2,1.2);
+}
+
+.cta{
+    transition: transform 0.3s ease ;
+}
+.cta:hover{
+    transform: scale(1.2,1.2);
+}
+/* SERVICES */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    margin: 15px;
+    display: inline-block;
+    border-radius: 20px;
+    width: 220px;
+    transition: transform 0.3s ease ;
+}
+
+.service-card:hover{
+    transform: scale(1.2,1.2);
+}
+
+#services{
+    animation: autoShowAnimation1 both;
+    animation-timeline: view(70% 5%);
+}
+#booking{
+    animation: autoShowAnimation2 both;
+    animation-timeline: view(100% 5%);
+}
+@keyframes autoShowAnimation2 {
+    from {
+        opacity: 0;
+         transform: translateY(200px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+#scrollEffect{
+    animation: autoShowAnimation1 both;
+    animation-timeline: view(70% 5%);
+}
+@keyframes autoShowAnimation1 {
+    from {
+        opacity: 0;
+         transform: translateY(200px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+/* GALLERY */
+.gallery {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,105,180,0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* BOOKING */
+.booking {
+    padding: 60px;
+    text-align: center;
+}
+
+.booking input,
+.booking select {
+    padding: 12px;
+    margin: 10px;
+    width: 250px;
+}
+
+.booking button {
+    padding: 12px 25px;
+    background: hotpink;
+    color: white;
+    border-radius: 20px;
+    border: none;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.modal img {
+    max-width: 80%;
+    margin-top: 60px;
+}
+
+/* PRICE LIST BUTTON */
+.price-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: hotpink;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.price-btn:hover {
+    transform: scale(1.1);
+}
+
+/* HIDDEN STATE */
+.hidden {
+    display: none;
+}
+
+/* PRICE IMAGES */
+.price-images {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.price-images img {
+    width: 220px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* PRICE BUTTON */
+.price-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: hotpink;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* 🔥 FIXED LOGIC */
+.price-images {
+    display: none; /* hidden by default */
+    margin-top: 25px;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.price-images.show {
+    display: flex; /* show when active */
+}
+
+.price-images img {
+    width: 220px;
+    border-radius: 15px;
+}
+
+/* PRICE MODAL BACKGROUND */
+.price-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+/* MODAL CONTENT (ALL 3 IMAGES SIDE BY SIDE) */
+.price-modal-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90%;
+}
+
+/* IMAGES */
+.price-modal-content img {
+    width: 300px;
+    border-radius: 15px;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
