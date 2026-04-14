@@ -10,11 +10,10 @@ body {
     padding: 80px 20px;
     background: linear-gradient(to right, #ffc0d3, #ff9eb5);
     color: white;
-    width:50%;
+    width: 80%;
+    margin: 40px auto; /* centers it nicely */
     border-radius: 30px;
-    position: relative;
-    left:570px;
-    bottom: 230px;
+    position: RIGHT;
 }
 
 .hero h1 {
