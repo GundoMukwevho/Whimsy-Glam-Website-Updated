@@ -35,8 +35,12 @@ Service: ${service}
 Date: ${date}
 Time: ${time}`;
 
-        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
-    };
+document.getElementById("successPopup").style.display = "flex";
+
+setTimeout(() => {
+    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+    document.getElementById("successPopup").style.display = "none";
+}, 2000);    };
 
     // ✅ FIXED TOGGLE
     const priceBtn = document.getElementById("priceBtn");

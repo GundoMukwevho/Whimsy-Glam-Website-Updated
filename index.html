@@ -38,24 +38,25 @@
 <section class="services" id="services">
     <h2>Our Services</h2>
 
-    <div class="service-card scrollEffect">
-        <h3>Plain Sets</h3>
-        <p>Any length/shape</p>
-        <strong>R180</strong>
+    <div class="services-container">
+
+        <div class="service-card scrollEffect">
+            <h3>Plain Sets</h3>
+            <p>Any length/shape</p>
+            <strong>R180</strong>
+        </div>
+
+        <div class="service-card scrollEffect">
+            <h3>Design Sets</h3>
+            <p>Any length/shape</p>
+            <strong>R250</strong>
+        </div>
+
     </div>
 
-    <div class="service-card scrollEffect">
-        <h3>Design Sets</h3>
-        <p>Any length/shape</p>
-        <strong>R250</strong>
-    </div>
-
-<button class="price-btn" onclick="openPriceModal()">View Full Price List</button>
-    <div id="priceImages" class="price-images">
-        <img src="images/price1.jpg">
-        <img src="images/price2.jpg">
-        <img src="images/price3.jpg">
-    </div>
+    <button class="price-btn" id="priceBtn" onclick="openPriceModal()">
+        View Full Price List
+    </button>
 </section>
 
 <!-- GALLERY -->
@@ -85,29 +86,47 @@
     </div>
 </section>
 
-<!-- BOOKING -->
-<section class="booking" id="booking">
-    <h2>Book Appointment</h2>
+<!-- BOOKING + ABOUT -->
+<section class="booking-container" id="booking">
 
-    <input type="text" id="name" placeholder="Your Name"><br>
+    <div class="about-section">
+        <div class="about-overlay">
+            <h2>About WhimsyGlam 💅</h2>
+            <p>
+                At WhimsyGlam, we specialize in clean, elegant nail designs 
+                tailored to your style. Whether you're going for simple or bold, 
+                we bring creativity, precision, and care to every set.
+            </p>
+            <p>
+                Book with us and experience beauty with a touch of personality ✨
+            </p>
+        </div>
+    </div>
 
-    <select id="service">
-        <option value="Plain Set">Plain Set</option>
-        <option value="Design Set">Design Set</option>
-    </select><br>
+    <div class="booking">
+        <h2>Book Appointment</h2>
 
-    <input type="date" id="date"><br>
-    <input type="time" id="time"><br>
+        <input type="text" id="name" placeholder="Your Name"><br>
 
-    <button onclick="book()">Confirm Booking</button>
+        <select id="service">
+            <option value="Plain Set">Plain Set</option>
+            <option value="Design Set">Design Set</option>
+        </select><br>
+
+        <input type="date" id="date"><br>
+        <input type="time" id="time"><br>
+
+        <button onclick="book()">Confirm Booking</button>
+    </div>
+
 </section>
 
-<!-- MODAL -->
+<!-- IMAGE MODAL -->
 <div class="modal" id="modal" onclick="closeModal()">
     <img id="modalImg">
 </div>
 
-<!-- PRICE LIST MODAL -->
+<!-- PRICE MODAL -->
 <div class="price-modal" id="priceModal">
     <span class="close-btn" onclick="closePriceModal()">✖</span>
 
@@ -118,11 +137,25 @@
     </div>
 </div>
 
+<!-- SUCCESS POPUP -->
+<div id="successPopup" class="success-popup">
+    <div class="success-box">
+        <h2>Booking Sent 💅</h2>
+        <p>Redirecting to WhatsApp...</p>
+    </div>
+</div>
+
 <script src="js/script.js"></script>
 
 <a class="whatsapp-float" href="https://wa.me/27730617274" target="_blank">
-    💬
+    ✆
 </a>
+<div id="successPopup" class="success-popup">
+    <div class="success-box">
+        <h2>Booking Sent 💅</h2>
+        <p>Redirecting to WhatsApp...</p>
+    </div>
+</div>
 
 </body>
 </html>
