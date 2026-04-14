@@ -7,9 +7,9 @@ body {
 /* HERO */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 0px 20px;
     background: linear-gradient(to right, #ffc0d3, #ff9eb5);
-    color: white;
+    color: rgb(255, 255, 255);
     width: 80%;
     margin: 40px auto; /* centers it nicely */
     border-radius: 30px;
@@ -188,6 +188,9 @@ body {
     align-items: center;
     justify-content: center;
     opacity: 0;
+    .overlay {
+    transition: opacity 0.3s ease;
+}
 }
 
 .gallery-item:hover .overlay {
@@ -406,4 +409,21 @@ body {
         transform: scale(1);
         opacity: 1;
     }
+}
+.overlay {
+    transition: opacity 0.3s ease;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo img {
+    width: 40px;      /* control size here */
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%; /* makes it circular (optional) */
 }
